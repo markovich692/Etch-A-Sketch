@@ -31,6 +31,19 @@ body {
   background-color: #ffa69e;
   color: #fff;
   border: 1px solid #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+}
+
+.cell-size:hover {
+  background-color: #fff;
+  color: #ffa69e;
+  border: 1px solid #ffa69e;
+}
+
+.cell-size:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(2px);
 }
 
 .grid-container {
