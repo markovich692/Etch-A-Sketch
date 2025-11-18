@@ -1,6 +1,8 @@
 const gridContainer = document.querySelector(".grid-container");
+const btnSetGridSize = document.querySelector(".cell-size-btn");
 const gridCell = document.createElement("div");
 let cell;
+let cells;
 
 const trace = function (gridElement) {
   gridElement.addEventListener("mouseenter", function () {
@@ -38,6 +40,8 @@ const resizeGridCells = function (size) {
 
 //Create a grid of n x n size
 const createGrid = function (size) {
+  gridContainer.innerHTML = "";
+
   for (let i = 0; i < size * size; i++) {
     cell = gridCell.cloneNode();
     cell.classList.add("grid-cell");
@@ -45,8 +49,23 @@ const createGrid = function (size) {
   }
 
   resizeGridCells(size);
-
-  console.log(gridContainer);
 };
 
-createGrid(55);
+createGrid(16);
+
+//Let user decide of the number of cells
+btnSetGridSize.addEventListener("click", function () {
+  let gridSize = Math.trunc(Number(prompt("Please enter a valid grid size (1-100): ")));
+
+  while (gridSize > 100 || isNaN(gridSize) || gridSize < 1) {
+    gridSize = Math.trunc(Number(prompt("Please enter a valid grid size (1-100): ")));
+  }
+
+  createGrid(gridSize);
+
+  cells = document.querySelectorAll(".grid-cell");
+
+  cells.forEach(function (cell) {
+    cell.style.backgroundColor = "";
+  });
+});

@@ -20,7 +20,7 @@ body {
   background-color: #f5cac3;
 }
 
-.cell-size {
+.cell-size-btn {
   text-transform: uppercase;
   font-weight: 600;
   padding: 1rem 1.5rem;
@@ -35,20 +35,20 @@ body {
   transition: all 0.2s;
 }
 
-.cell-size:hover {
+.cell-size-btn:hover {
   background-color: #fff;
   color: #ffa69e;
   border: 1px solid #ffa69e;
 }
 
-.cell-size:active {
+.cell-size-btn:active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transform: translateY(2px);
 }
 
 .grid-container {
-  width: 96rem;
-  height: 96rem;
+  width: 65rem;
+  height: 65rem;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
