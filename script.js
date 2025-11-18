@@ -49,4 +49,4 @@ const createGrid = function (size) {
   console.log(gridContainer);
 };
 
-createGrid(99);
+createGrid(90);
