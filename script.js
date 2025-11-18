@@ -2,13 +2,24 @@ const gridContainer = document.querySelector(".grid-container");
 const gridCell = document.createElement("div");
 let cell;
 
+const trace = function (gridElement) {
+  gridElement.addEventListener("mouseenter", function () {
+    gridElement.style.backgroundColor = "blue";
+  });
+};
+
 const setGridCellSize = function (computedStyleWidthPx, computedStyleHeightPx, rootFontSize, size) {
-  document.querySelectorAll(".grid-cell").forEach(function (el) {
+  const gridCells = document.querySelectorAll(".grid-cell");
+
+  gridCells.forEach(function (el) {
     const gridCellWidthRem = computedStyleWidthPx / size / rootFontSize;
     const gridCellHeightRem = computedStyleHeightPx / size / rootFontSize;
 
     el.style.width = gridCellWidthRem + "rem";
     el.style.height = gridCellHeightRem + "rem";
+
+    //Fill grid cells on mouse enter
+    trace(el);
   });
 };
 
@@ -34,6 +45,8 @@ const createGrid = function (size) {
   }
 
   resizeGridCells(size);
+
+  console.log(gridContainer);
 };
 
 createGrid(99);
