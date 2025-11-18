@@ -4,7 +4,7 @@ let cell;
 
 const trace = function (gridElement) {
   gridElement.addEventListener("mouseenter", function () {
-    gridElement.style.backgroundColor = "blue";
+    gridElement.style.backgroundColor = "#f28482";
   });
 };
 
@@ -49,4 +49,4 @@ const createGrid = function (size) {
   console.log(gridContainer);
 };
 
-createGrid(90);
+createGrid(55);
