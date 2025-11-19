@@ -7,6 +7,7 @@ let cells;
 const trace = function (gridElement) {
   gridElement.addEventListener("mouseenter", function () {
     gridElement.style.backgroundColor = "#f28482";
+    gridElement.style.transition = "all .1s";
   });
 };
 
