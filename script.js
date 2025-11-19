@@ -55,9 +55,11 @@ const createGrid = function (size) {
 
 //Let user decide of the number of cells
 btnSetGridSize.addEventListener("click", function () {
-  let gridSize = Math.trunc(Number(prompt("Please enter a valid grid size (1-100): ")));
+  let input = prompt("Please enter a valid grid size (1-100): ");
 
-  if (gridSize === null || gridSize.trim() === "") return;
+  if (input === null || input.trim() === "") return;
+
+  let gridSize = Math.trunc(Number(input));
 
   while (gridSize > 100 || isNaN(gridSize) || gridSize < 1) {
     gridSize = Math.trunc(Number(prompt("Please enter a valid grid size (1-100): ")));
