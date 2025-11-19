@@ -51,7 +51,7 @@ const createGrid = function (size) {
   resizeGridCells(size);
 };
 
-createGrid(16);
+// createGrid(16);
 
 //Let user decide of the number of cells
 btnSetGridSize.addEventListener("click", function () {
